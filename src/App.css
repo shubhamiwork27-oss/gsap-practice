@@ -1,0 +1,106 @@
+﻿  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    width: 100%;
+
+  }
+  body{
+    background-color: black;
+    color: white;
+  }
+  body::-webkit-scrollbar{
+    background-color: transparent;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 90px;
+    border: 4px solid black;
+  }
+  .page1,
+  .page2 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page1 h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+  }
+  .page1{
+    display: flex;
+    flex-direction: column;
+  }
+  .page1 img{
+    width: 90px;
+    height: 90px;
+    margin-top: 30px;
+    border: 2px solid #000000;
+    padding:10px;
+    border-radius: 100px;
+    filter: invert(1);
+  }
+  .page2 {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .page2 img {
+    width: 30vw;
+    height: 30vh;
+    object-fit: contain;
+    max-width: none;
+    z-index: 1;
+  }
+
+  .page2 .text-row {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6vw;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .block{
+    width: 100%;
+    height: 30rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    background: linear-gradient(to bottom ,transparent, transparent,rgba(0, 0, 0, 0.37),#000000);
+  }
+  .page2 .text-left,
+  .page2 .text-right {
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 900;
+    margin-top: 600px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+.page2 .text-left,
+.page2 .text-right {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  color: rgba(255, 255, 255, 0.452);
+  background-image: url("./image.png"); /* same image */
+  background-size: cover;
+  background-position: center;
+  text-shadow: 0px 0px 10px black;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  filter:contrast(100);
+}
